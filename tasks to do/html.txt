@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>to_do_list_app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo_app">
+        <h2>to do list <img src="icon.png" /></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="add your texte" />
+          <button onclick="addTask()">add</button>
+        </div>
+        <ul id="list-container" class="list-container">
+          <!--<li class="checked">task1</li>
+          <li>task2</li>
+          <li>task3</li> -->
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

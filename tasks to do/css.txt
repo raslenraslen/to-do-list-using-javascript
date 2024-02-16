@@ -1,0 +1,125 @@
+/* Réinitialisation des marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ajout pour une meilleure gestion des tailles */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Conteneur principal */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Arrière-plan du corps */
+body {
+  background-image: url("wallpaper2.jpg");
+}
+
+/* Conteneur de l'application ToDo */
+.todo_app {
+  width: 100%;
+  max-width: 540px;
+  margin: 100px auto 20px; /* Centrage vertical et espace en haut */
+  padding: 40px 30px 70px;
+  background-color: gainsboro;
+  border-radius: 10px;
+}
+
+/* Titre de l'application */
+.todo_app h2 {
+  display: flex;
+  align-items: center;
+  color: #002765;
+  margin-bottom: 20px;
+}
+
+/* Icône du titre */
+.todo_app h2 img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* Ligne contenant l'entrée et le bouton */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+/* Champ de texte */
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+/* Bouton */
+button {
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 30px 25px;
+  background: #ff5945;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+/* Éléments de liste */
+li {
+  font-size: 17px;
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Puce personnalisée */
+li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url("raslen.png");
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+/* Ligne barrée pour les tâches terminées */
+li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+/* Puce personnalisée pour les tâches terminées */
+li.checked::before {
+  background-image: url("checked.png");
+}
+li span {
+  position: absolute;
+  right: inherit;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  text-align: center;
+  border-radius: 50%;
+}
+li span:hover {
+  background: #edeef0;
+}
